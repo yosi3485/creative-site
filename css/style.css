@@ -2,6 +2,7 @@
 
 * {
 	box-sizing: border-box;
+	transition: all ease-in-out 250ms;
 }
 
 body {
@@ -31,6 +32,7 @@ h1 {
 
 p {
 	margin-top: 0;
+	line-height: 1.5;
 }
 
 p:last-of-type {
@@ -52,6 +54,12 @@ p:last-of-type {
 }
 
 @media (min-width: 60rem) {
+	
+	p {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
 	.title {
 		font-size: 3.7rem;
 	}
@@ -65,6 +73,11 @@ p:last-of-type {
 	border-width: 2px;
 	border-style: solid;
 	padding: .5em 1.75em;
+}
+
+.button-small {
+	font-size: .7rem;
+	font-weight: 700;
 }
 
 .button-accent {
@@ -215,5 +228,63 @@ nav a:focus {
 		transform: translateX(0);
 	}
 }
+
+/* Portfolio 
+=========== */
+
+.portfolio {
+	margin: 3em 0;
+}
+
+.port-item {
+	position: relative;
+	margin: 0;
+}
+
+.port-item img {
+	display: block;
+}
+
+.port-desc {
+	position: absolute;
+	z-index: 100;
+	bottom: 0em;
+	left: 0em;
+	right: 0em;
+	color: #FFF;
+	background: rgba(0, 0, 0, .6);
+	padding: 2em;
+}
+
+@media (min-width: 37em) {
+	.port-item {
+		width: 50%;
+		float: left;
+	}
+}
+
+@media (min-width: 60em) {
+	.port-item {
+		width: 33.333333%;
+		overflow: hidden;
+	}
+
+	.port-desc {
+		transform: translateY(150%);
+	}
+
+	.port-item:hover .port-desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center; 
+		top: 0;
+		transform: translateY(0%);
+	}
+}
+
+
+
+
 
 
