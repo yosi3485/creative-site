@@ -13,3 +13,10 @@ function parallax() {
   $('.parallax--box').css('top', -5 + (wScroll*.005)+'em')
 
 }
+
+window.onscroll = () => {
+  const nav = document.querySelector('header');
+  if(this.scrollY <= 30) 
+  	nav.className = ''; 
+  else nav.className = 'scroll';
+};
