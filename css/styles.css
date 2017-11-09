@@ -252,6 +252,7 @@ nav a:focus {
 	.home-hero {
 		height: 100vh;
 		padding-top: 35vh;
+		padding-bottom: 30rem;
 	}
 }
 
